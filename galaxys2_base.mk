@@ -66,9 +66,7 @@ PRODUCT_PACKAGES := \
     com.android.future.usb.accessory \
     GalaxyS2Settings \
     SamsungServiceMode \
-    Torch \
-    TvOut \
-    TvOutHack
+    Torch
 
 # HAL
 PRODUCT_PACKAGES += \
