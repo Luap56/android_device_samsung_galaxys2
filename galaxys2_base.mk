@@ -33,10 +33,13 @@ PRODUCT_COPY_FILES += \
 
 # Vold and Storage
 PRODUCT_COPY_FILES += \
-	device/samsung/galaxys2/configs/vold.fstab:system/etc/vold.fstab \
+	device/samsung/galaxys2/configs/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
+	ro.vold.switchablepair=/mnt/emmc,/mnt/sdcard
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	persist.sys.vold.switchexternal=1
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
@@ -71,6 +74,7 @@ PRODUCT_PACKAGES := \
 # HAL
 PRODUCT_PACKAGES += \
     lights.exynos4 \
+    sensors.exynos4 \
     libhwconverter \
     libswconverter \
     libs5pjpeg \
